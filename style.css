@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Plain Light";
   color: #fff;
+  /* cursor: none; */
 }
 
 html,
@@ -17,6 +18,17 @@ body {
   overflow-x: hidden;
 }
 
+.crsr {
+  height: 3.4vw;
+  width: 3.4vw;
+  border: 1px solid rgba(250, 243, 243, 0.493);
+  position: fixed;
+  z-index: 9999;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
 .main {
   position: relative;
   background-color: #030303;
@@ -28,7 +40,6 @@ body {
   background-color: #030303;
   position: fixed;
   z-index: 999;
-
   padding: 16vh 10vw;
   font-size: 3em;
 }
@@ -72,7 +83,7 @@ body {
 .page1 {
   height: 100vh;
   width: 100%;
-  background-color:rgb(119, 113, 113);;
+  background-color: #151515;
 }
 
 @keyframes anime {
@@ -107,4 +118,63 @@ body {
     color: transparent;
     opacity: 0;
   }
+}
+
+/* ------------------navbar---------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 8rem;
+}
+.nav-part2 {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin-left: 4rem;
+  align-items: end;
+}
+.nav-part2 h4 {
+  /* font-size: 2rem; */
+  font-weight: 500;
+  /* margin: 2rem; */
+}
+
+/* -------------section1------------- */
+
+.section1 {
+  width: 50rem;
+  margin: auto;
+  text-align: center;
+  margin: 4rem 24rem;
+}
+.section1 h1 {
+  display: flex;
+  font-size: 6.2rem;
+  font-weight: 600;
+  line-height: 6.4rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.hero{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 99999;
+
+}
+
+.section1 h2,h3 {
+  display: flex;
+  font-size: 6.2rem;
+  font-weight: 600;
+  line-height: 6.4rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.hero h2:hover{
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-weight: 500;
 }
